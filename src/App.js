@@ -39,7 +39,7 @@ function App() {
   const [userExpense, setUserExpense] = useState('');
   const [friendsExpense, setFriendsExpense] = useState('');
   const [payingExpense, setPayingExpense] = useState('you');
-  const [showSplitForm, setShowSplitForm] = useState(false);
+  const [showSplitForm, setShowSplitForm] = useState(true);
 
   
   const handleAddFriend = () => {
@@ -53,7 +53,7 @@ function App() {
   const handleSelectdFriend = (id) => { 
     const seletedItem = allFriends.find((item) => item.id === id)
     setSelectedUser(seletedItem)
-      setShowSplitForm((prevState) => !prevState)
+      // setShowSplitForm((prevState) => !prevState)
       setTotalBill('')
       setUserExpense('')
       setFriendsExpense('')
